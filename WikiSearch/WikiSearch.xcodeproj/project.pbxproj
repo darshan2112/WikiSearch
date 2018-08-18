@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5581B1E7A094EAC0B4F582 /* Pods_WikiSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726AECE7AEEF24BE5227301A /* Pods_WikiSearch.framework */; };
 		CDAFD2832128915C007D365C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2822128915C007D365C /* AppDelegate.swift */; };
-		CDAFD2852128915C007D365C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2842128915C007D365C /* ViewController.swift */; };
 		CDAFD2882128915C007D365C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD2862128915C007D365C /* Main.storyboard */; };
 		CDAFD28A2128915F007D365C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD2892128915F007D365C /* Assets.xcassets */; };
 		CDAFD28D2128915F007D365C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD28B2128915F007D365C /* LaunchScreen.storyboard */; };
+		CDAFD29521289387007D365C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD29421289387007D365C /* SearchViewController.swift */; };
+		CDAFD298212894A1007D365C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD297212894A1007D365C /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4148EC9AA99DA6C4A17CF843 /* Pods-WikiSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WikiSearch/Pods-WikiSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		5A0DE80735C2CAFD4D62C941 /* Pods-WikiSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-WikiSearch/Pods-WikiSearch.release.xcconfig"; sourceTree = "<group>"; };
+		726AECE7AEEF24BE5227301A /* Pods_WikiSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAFD27F2128915C007D365C /* WikiSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAFD2822128915C007D365C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDAFD2842128915C007D365C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDAFD2872128915C007D365C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDAFD2892128915F007D365C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDAFD28C2128915F007D365C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDAFD28E2128915F007D365C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAFD29421289387007D365C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CDAFD297212894A1007D365C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5581B1E7A094EAC0B4F582 /* Pods_WikiSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D536B5422E18E38D9528CB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4148EC9AA99DA6C4A17CF843 /* Pods-WikiSearch.debug.xcconfig */,
+				5A0DE80735C2CAFD4D62C941 /* Pods-WikiSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3590EFE07D5934804721691 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				726AECE7AEEF24BE5227301A /* Pods_WikiSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CDAFD2762128915C007D365C = {
 			isa = PBXGroup;
 			children = (
 				CDAFD2812128915C007D365C /* WikiSearch */,
 				CDAFD2802128915C007D365C /* Products */,
+				0D536B5422E18E38D9528CB7 /* Pods */,
+				A3590EFE07D5934804721691 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,23 @@
 		CDAFD2812128915C007D365C /* WikiSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CDAFD2962128938C007D365C /* Controllers */,
 				CDAFD2822128915C007D365C /* AppDelegate.swift */,
-				CDAFD2842128915C007D365C /* ViewController.swift */,
 				CDAFD2862128915C007D365C /* Main.storyboard */,
 				CDAFD2892128915F007D365C /* Assets.xcassets */,
+				CDAFD297212894A1007D365C /* Colors.xcassets */,
 				CDAFD28B2128915F007D365C /* LaunchScreen.storyboard */,
 				CDAFD28E2128915F007D365C /* Info.plist */,
 			);
 			path = WikiSearch;
+			sourceTree = "<group>";
+		};
+		CDAFD2962128938C007D365C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD29421289387007D365C /* SearchViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDAFD2912128915F007D365C /* Build configuration list for PBXNativeTarget "WikiSearch" */;
 			buildPhases = (
+				7E4B87195940D200AFFD069F /* [CP] Check Pods Manifest.lock */,
 				CDAFD27B2128915C007D365C /* Sources */,
 				CDAFD27C2128915C007D365C /* Frameworks */,
 				CDAFD27D2128915C007D365C /* Resources */,
+				8027E2C7432B6A0FBC392172 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDAFD28D2128915F007D365C /* LaunchScreen.storyboard in Resources */,
+				CDAFD298212894A1007D365C /* Colors.xcassets in Resources */,
 				CDAFD28A2128915F007D365C /* Assets.xcassets in Resources */,
 				CDAFD2882128915C007D365C /* Main.storyboard in Resources */,
 			);
@@ -130,12 +168,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E4B87195940D200AFFD069F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8027E2C7432B6A0FBC392172 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WikiSearch/Pods-WikiSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WikiSearch/Pods-WikiSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CDAFD27B2128915C007D365C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAFD2852128915C007D365C /* ViewController.swift in Sources */,
+				CDAFD29521289387007D365C /* SearchViewController.swift in Sources */,
 				CDAFD2832128915C007D365C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,15 +355,13 @@
 		};
 		CDAFD2922128915F007D365C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4148EC9AA99DA6C4A17CF843 /* Pods-WikiSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85798AGXB2;
 				INFOPLIST_FILE = WikiSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.WikiSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +371,13 @@
 		};
 		CDAFD2932128915F007D365C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0DE80735C2CAFD4D62C941 /* Pods-WikiSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85798AGXB2;
 				INFOPLIST_FILE = WikiSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.WikiSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

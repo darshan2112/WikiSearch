@@ -78,6 +78,10 @@ class SearchViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
     }
     
+    
+    /// Method to display error while fetching data from WIKI APIs
+    ///
+    /// - Parameter message: Message to be displayed in the alert
     func showErrorPopUp(withMessage message: String) {
         
         let alertController = UIAlertController(title: "Could not complete action", message: message, preferredStyle: .alert)
@@ -91,6 +95,9 @@ class SearchViewController: UIViewController {
     }
     
     
+    /// Helper method to make network call and parse response 
+    ///
+    /// - Parameter query: search string to be passed
     func getSearchResults(forQueryString query: String) {
         
         APIConnector.shared.searchWikiForQueryString(queryString: query) { (statusCode, data, error) in
@@ -113,6 +120,8 @@ class SearchViewController: UIViewController {
     }
 }
 
+
+//MARK: - SEARCH BAR DELEGATE
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -124,7 +133,8 @@ extension SearchViewController: UISearchBarDelegate {
                 self.searchBarTextChangeTimer = nil
             }
             
-            self.searchBarTextChangeTimer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false, block: { (timer) in
+            //Giving 0.3s break before searching for query string to make sure user isn't editing further
+            self.searchBarTextChangeTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: { (timer) in
                 self.getSearchResults(forQueryString: searchText)
             })
             
@@ -136,7 +146,7 @@ extension SearchViewController: UISearchBarDelegate {
 }
 
 
-
+//MARK: - TABLEVIEW DATASOURCE
 extension SearchViewController : UITableViewDataSource {
     
     
@@ -157,9 +167,7 @@ extension SearchViewController : UITableViewDataSource {
         cell.titleLabel.text = page.title
         
         if let description = page.terms?.description {
-            
             cell.descriptionLabel.text = description.count > 0 ? description[0] : ""
-            
         }
         
         //Loading image from cache if present
@@ -193,7 +201,7 @@ extension SearchViewController : UITableViewDataSource {
     }
 }
 
-
+//MARK: - TABLEVIEW DELEGATE
 extension SearchViewController: UITableViewDelegate {
     
     

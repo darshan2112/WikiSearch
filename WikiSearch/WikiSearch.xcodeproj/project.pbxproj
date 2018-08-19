@@ -14,6 +14,15 @@
 		CDAFD28D2128915F007D365C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD28B2128915F007D365C /* LaunchScreen.storyboard */; };
 		CDAFD29521289387007D365C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD29421289387007D365C /* SearchViewController.swift */; };
 		CDAFD298212894A1007D365C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD297212894A1007D365C /* Colors.xcassets */; };
+		CDAFD29B21289A74007D365C /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD29A21289A74007D365C /* APIConnector.swift */; };
+		CDAFD29E21289A9C007D365C /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD29D21289A9C007D365C /* RequestHandler.swift */; };
+		CDAFD2A021289CB6007D365C /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD29F21289CB6007D365C /* APIUrls.swift */; };
+		CDAFD2A4212979F9007D365C /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2A2212979F9007D365C /* SearchListTableViewCell.swift */; };
+		CDAFD2A5212979F9007D365C /* SearchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAFD2A3212979F9007D365C /* SearchListTableViewCell.xib */; };
+		CDAFD2A921297B26007D365C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2A821297B26007D365C /* Extensions.swift */; };
+		CDAFD2AB21297B47007D365C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2AA21297B47007D365C /* Utilities.swift */; };
+		CDAFD2AD21297BD4007D365C /* WikiSearchObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2AC21297BD4007D365C /* WikiSearchObject.swift */; };
+		CDAFD2B021298D7C007D365C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAFD2AF21298D7C007D365C /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		CDAFD28E2128915F007D365C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDAFD29421289387007D365C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CDAFD297212894A1007D365C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CDAFD29A21289A74007D365C /* APIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
+		CDAFD29D21289A9C007D365C /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		CDAFD29F21289CB6007D365C /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		CDAFD2A2212979F9007D365C /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
+		CDAFD2A3212979F9007D365C /* SearchListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListTableViewCell.xib; sourceTree = "<group>"; };
+		CDAFD2A821297B26007D365C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CDAFD2AA21297B47007D365C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CDAFD2AC21297BD4007D365C /* WikiSearchObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchObject.swift; sourceTree = "<group>"; };
+		CDAFD2AF21298D7C007D365C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +99,12 @@
 			isa = PBXGroup;
 			children = (
 				CDAFD2962128938C007D365C /* Controllers */,
+				CDAFD29C21289A7A007D365C /* NetworkManager */,
+				CDAFD2A6212979FD007D365C /* CustomReusableCells */,
+				CDAFD2A121289CB9007D365C /* Constants */,
+				CDAFD2AE21297BDD007D365C /* Model */,
+				CDAFD29921289A49007D365C /* SupportingFiles */,
 				CDAFD2822128915C007D365C /* AppDelegate.swift */,
-				CDAFD2862128915C007D365C /* Main.storyboard */,
-				CDAFD2892128915F007D365C /* Assets.xcassets */,
-				CDAFD297212894A1007D365C /* Colors.xcassets */,
-				CDAFD28B2128915F007D365C /* LaunchScreen.storyboard */,
 				CDAFD28E2128915F007D365C /* Info.plist */,
 			);
 			path = WikiSearch;
@@ -95,8 +114,64 @@
 			isa = PBXGroup;
 			children = (
 				CDAFD29421289387007D365C /* SearchViewController.swift */,
+				CDAFD2AF21298D7C007D365C /* WebViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CDAFD29921289A49007D365C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD2862128915C007D365C /* Main.storyboard */,
+				CDAFD2892128915F007D365C /* Assets.xcassets */,
+				CDAFD297212894A1007D365C /* Colors.xcassets */,
+				CDAFD28B2128915F007D365C /* LaunchScreen.storyboard */,
+				CDAFD2A821297B26007D365C /* Extensions.swift */,
+				CDAFD2AA21297B47007D365C /* Utilities.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CDAFD29C21289A7A007D365C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD29A21289A74007D365C /* APIConnector.swift */,
+				CDAFD29D21289A9C007D365C /* RequestHandler.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CDAFD2A121289CB9007D365C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD29F21289CB6007D365C /* APIUrls.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CDAFD2A6212979FD007D365C /* CustomReusableCells */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD2A721297A0E007D365C /* SearchListTableViewCell */,
+			);
+			path = CustomReusableCells;
+			sourceTree = "<group>";
+		};
+		CDAFD2A721297A0E007D365C /* SearchListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD2A2212979F9007D365C /* SearchListTableViewCell.swift */,
+				CDAFD2A3212979F9007D365C /* SearchListTableViewCell.xib */,
+			);
+			path = SearchListTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDAFD2AE21297BDD007D365C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD2AC21297BD4007D365C /* WikiSearchObject.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAFD2A5212979F9007D365C /* SearchListTableViewCell.xib in Resources */,
 				CDAFD28D2128915F007D365C /* LaunchScreen.storyboard in Resources */,
 				CDAFD298212894A1007D365C /* Colors.xcassets in Resources */,
 				CDAFD28A2128915F007D365C /* Assets.xcassets in Resources */,
@@ -212,8 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAFD29B21289A74007D365C /* APIConnector.swift in Sources */,
+				CDAFD2AD21297BD4007D365C /* WikiSearchObject.swift in Sources */,
+				CDAFD2A021289CB6007D365C /* APIUrls.swift in Sources */,
+				CDAFD2B021298D7C007D365C /* WebViewController.swift in Sources */,
 				CDAFD29521289387007D365C /* SearchViewController.swift in Sources */,
+				CDAFD2A4212979F9007D365C /* SearchListTableViewCell.swift in Sources */,
+				CDAFD29E21289A9C007D365C /* RequestHandler.swift in Sources */,
 				CDAFD2832128915C007D365C /* AppDelegate.swift in Sources */,
+				CDAFD2AB21297B47007D365C /* Utilities.swift in Sources */,
+				CDAFD2A921297B26007D365C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +445,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85798AGXB2;
 				INFOPLIST_FILE = WikiSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.WikiSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -377,7 +464,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85798AGXB2;
 				INFOPLIST_FILE = WikiSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.WikiSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
